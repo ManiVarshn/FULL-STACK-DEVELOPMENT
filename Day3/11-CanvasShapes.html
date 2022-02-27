@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:10px solid darkslategray;
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script>
+        addEventListener("load",init);
+        var can,ctx,bx=0,by=0,bd=100;
+        function init()
+        {
+            can=document.getElementsByTagName("canvas")[0];
+            can.width="500";
+            can.height="500";
+            ctx=can.getContext("2d");
+            ctx.beginPath();
+            ctx.moveTo(100,100);
+            ctx.lineTo(200,100);
+            ctx.lineTo(200,200);
+            ctx.lineTo(100,200);
+            ctx.lineTo(100,100);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.moveTo(300,100);
+            ctx.lineTo(400,100);
+            ctx.lineTo(400,200);
+            ctx.lineTo(300,200);
+            ctx.lineTo(300,100);
+            ctx.closePath();
+            ctx.lineWidth=10;
+            ctx.lineCap='round'; 
+            ctx.stroke();
+            var gradient=ctx.createLinearGradient(80,80,220,0);
+            gradient.addColorStop(0,'green');
+            gradient.addColorStop(.5,'cyan');
+            gradient.addColorStop(1,'green');
+            ctx.fillStyle=gradient;
+            ctx.fillRect(150,250,200,100);
+            
+         }
+    </script>
+</head>
+<body>
+    <canvas >
+
+    </canvas>
+</body>
+</html>

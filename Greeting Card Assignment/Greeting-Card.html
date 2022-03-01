@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:1px solid grey;
+            display: block;
+            margin: auto;
+            background-color: rgb(255, 196, 214);
+        }
+    </style>
+    <script>
+       function addText()
+       {
+           print();
+           ctx.stroke();
+       }
+       function print()
+       {
+           let m=input();
+           ctx.fillStyle="black";
+           ctx.font="30px Arial";
+           ctx.fillText(m,400,400);
+       }
+       function input()
+       {
+           var name=document.getElementById("input1").value;
+           var date=document.getElementById("input2").value;
+           let msg="Birthday Girl ${name} and Date${date}";
+           return msg;
+       }
+            
+     
+        
+    </script>
+
+    <script>
+        var can,ctx,bx=0,by=0,bd=100;;
+        addEventListener("load",init)
+        function init()
+        {
+            can=document.getElementsByTagName("canvas")[0];
+            ctx=can.getContext("2d");
+            can.width=500;
+            can.height=500;
+            ctx.font="bold 36px Arial";
+            ctx.textAlign="center";
+            ctx.beginPath();
+            ctx.moveTo(108, 0.0);
+            ctx.lineTo(141, 70);
+            ctx.lineTo(218, 78.3);
+            ctx.lineTo(162, 131);
+            ctx.lineTo(175, 205);
+            ctx.lineTo(108, 170);
+            ctx.lineTo(41.2, 205);
+            ctx.lineTo(55, 131);
+            ctx.lineTo(1, 78);
+            ctx.lineTo(75, 68);
+            ctx.lineTo(108, 0);
+            ctx.closePath();
+            ctx.fillStyle='green';
+            ctx.fill();
+            ctx.strokeStyle='blue';
+            ctx.stroke();
+            var rdl=ctx.createRadialGradient(230,230,25,230,230,100);
+            rdl.addColorStop(0.0,"#f00");
+            rdl.addColorStop(0.5,"blue");
+            rdl.addColorStop(1.0,"cyan");
+            setInterval(function(){ 
+                ctx.beginPath();
+            ctx.fillStyle=rdl;
+            ctx.arc(230,230,50,0,2*Math.PI);
+            ctx.fill();
+            ctx.rotate(2);
+
+            },50)
+
+    };
+    
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Type Of Input</th>
+                <th>As Rendered By Browser</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" id="input1"/></td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td><input type="date" id="input2"/></td>
+              </tr>
+              <tr>
+                <td>Submit Button </td>
+                <td><button id="input3" onclick="addText();">Submit</button></td>
+              </tr>
+              </tbody>
+    </table>
+    <canvas id='canvas1'>
+        
+
+    </canvas>
+    
+</body>
+</html>

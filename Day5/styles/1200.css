@@ -1,0 +1,7 @@
+article:nth-last-child(1){
+    background-color: rgb(104, 241, 62);
+    
+}
+article:nth-last-child(2){
+    background-color: peachpuff
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <!--<style media="print">
+        @import url(styles/print.css);
+
+    </style>-->
+    <link media="print" rel="stylesheet" href="styles/print.css">
+    <link media="screen" rel="stylesheet" href="styles/all.css">
+    <link media="screen and (max-width:1200px)" rel="stylesheet" href="styles/1200.css">
+    <link media="screen and (max-width:1100px)" rel="stylesheet" href="styles/1100.css">
+    <link media="screen and (orientation:landscape)" rel="stylesheet" href="styles/landscape.css">
+    <link media="screen and (orientation:portrait)" rel="stylesheet" href="styles/portrait.css">
+
+    <script>
+        addEventListener("load",function(){
+            setInterval(function(){
+
+          document.getElementById("log").innerText=innerWidth+"px";
+            },100)
+        })
+
+        </script>
+</head>
+<body>
+    <h1 id="log"></h1>
+    <hr>
+    <section>
+        <article>1</article>
+        <article>2</article>
+        <article>3</article>
+        <article>4</article>
+        <article>5</article>
+        <article>6</article>
+        <article>7</article>
+        <article>8</article>
+        <article>8</article>
+        <article>10</article>
+    </section>
+        
+</body>
+</html>

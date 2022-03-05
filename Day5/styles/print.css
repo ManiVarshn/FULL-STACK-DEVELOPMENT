@@ -1,0 +1,14 @@
+article{
+    width: 100px;
+    height: 100px;
+    background-color: silver;
+    text-align: center;
+    border:1px solid black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 5px;
+    float: left;
+
+}

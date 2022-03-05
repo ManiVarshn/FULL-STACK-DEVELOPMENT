@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/modernizer.js"></script>
+    <!--<script>
+        if(Modernizr.borderradius)
+        {
+            alert("Modernizer Found");
+        }
+        else{
+            alert("Modernizer Not Found");
+        }
+    </script>-->
+    <style>
+        .box{
+            width: 270.99px;
+            height: 180px;
+            background-color: red;
+            margin: 100px auto;
+            border-radius:20px ;
+        }
+        .no-borderradius .box{
+            width: 270.99px;
+            height: 180px;
+            background-color:black;
+            margin: 100px auto;
+           background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkFBQoFBQUFBQ8ICQUKFBEWFhQRExMYHCggGBolGxMTITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NFysdFRktKysrKystKysrKysrLSsrKysrLSs3KysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAVAAEBAAAAAAAAAAAAAAAAAAAABv/EABQQAQAAAAAAAAAAAAAAAAAAAAD/xAAWAQEBAQAAAAAAAAAAAAAAAAAABwb/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCMAZ9XwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//Z");
+
+        }
+    </style>
+    <script>
+        onload=function(){ if(Modernizr.borderradius){
+                document.getElementById("log").innerHTML="Border Radius Found";
+            }
+            else{
+                document.getElementById("log").innerHTML="Border Radius Not Found";
+            }
+        }
+        </script>
+</head>
+<body>
+   <div class="box"></div>
+   <h1 id="log"></h1>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    label{
+        display:inline-block;
+        width:80px;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+    <form action="#" mathod="get">
+        <div>
+            <label for="uname">Username:</label>
+            <input required id="uname"></input>
+        </div>
+        <div>
+            <label for="uage">User Age:</label>
+            <input type="number" id="uage" min="18" max="100" width="100px"></input>
+        </div>
+        <div>
+            <label for="uemail">User Email:</label>
+            <input pattern=".*@.*" required id="uemail"></input>
+        </div>
+        <div>
+            <label for="uphone">User Phone</label>
+            <input title="Requested Pattern : ###-####-####"  placeholder="###-####-####" pattern="\d{3}-\d{4}-\d{4}" type="tel" required id="uphone"></input>
+        </div>
+        <button>Submit</button>
+
+    </form>
+ 
+</body>
+</html>

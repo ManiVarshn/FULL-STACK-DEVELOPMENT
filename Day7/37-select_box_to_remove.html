@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            height: 400px;
+            background-color: crimson;
+            padding:5px;
+            margin: 50px auto;
+            border: 1px solid transparent;
+            overflow: auto;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            background-color: khaki;
+            margin: 5px;
+            float: left;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            line-height: 100px;
+
+
+        }
+        .container div:hover{
+            cursor: pointer;
+            background-color: thistle;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+         
+        var count=1,container;
+        document.addEventListener("DOMContentLoaded",function(){
+            container=document.getElementsByClassName("container")[0];
+            container.addEventListener("click",removeSelectedBoxFromContainer);
+            document.getElementsByTagName("button")[0].addEventListener("click",addBoxHandler);
+            
+           });
+
+           function addBoxHandler(){
+                var element = document.createElement("div");
+                element.innerText=count;
+                //element.addEventListener("click",removeSelectedBox);
+                container.appendChild(element);
+                count++;
+           };
+          /* function removeSelectedBox(evt){
+               container.removeChild(evt.target);
+            };*/
+            function removeSelectedBoxFromContainer(evt){
+                if(event.target.getAttribute("class")!=="container"){
+                    container.removeChild(evt.target);
+                }
+                else{
+                    alert("You Clicked On The Container");
+                }
+               
+
+            }
+           
+            
+                
+    </script>
+</head>
+<body >
+    <button>Add Box</button>
+    <hr>
+    <div  class="container"></div>
+</body>

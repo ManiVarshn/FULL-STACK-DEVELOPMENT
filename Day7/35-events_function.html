@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            height: 400px;
+            background-color: crimson;
+            padding:5px;
+            margin: 50px auto;
+            border: 1px solid transparent;
+            overflow: auto;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            background-color: khaki;
+            margin: 5px;
+            float: left;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            line-height: 100px;
+
+
+        }
+    </style>
+    <script>
+
+       /*onload="init()" function init(){
+            console.log("Body Has Loaded");
+        }
+        function divonload(){
+            console.log("Div Loaded");
+        }
+        function firstButtonLoaded(){
+            console.log("First Button loaded");
+        }
+        function secondButtonLoaded(){
+            console.log("Second Button Loaded");
+        }*/
+
+        document.addEventListener("DOMContentLoaded",function(){
+            document.getElementsByTagName("button")[0].addEventListener("click", addBoxHandler);
+            document.getElementsByTagName("button")[1].addEventListener("click", stopAddingBoxHandler);
+           });
+
+           function addBoxHandler(){
+                var element = document.createElement("div");
+                document.getElementsByClassName("container")[0].appendChild(element);
+                console.log("box added")
+           };
+           function stopAddingBoxHandler(){
+                document.getElementsByTagName("button")[0].removeEventListener("click", addBoxHandler);
+                document.getElementsByTagName("button")[1].removeEventListener("click", stopAddingBoxHandler);
+                console.log("stopped adding box")
+           };
+    </script>
+</head>
+<body >
+    <button>Add Box</button>
+    <button>Stop Adding Boxes</button>
+    <hr>
+    <div  class="container"></div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            height: 400px;
+            background-color: crimson;
+            padding:5px;
+            margin: 50px auto;
+            border: 1px solid transparent;
+            overflow: auto;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            background-color: khaki;
+            margin: 5px;
+            float: left;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            line-height: 100px;
+
+
+        }
+    </style>
+    <script>
+          /*var count=1;
+        document.addEventListener("DOMContentLoaded",function(){
+            document.getElementsByTagName("button")[0].addEventListener("click", addBoxHandler);
+            document.getElementsByTagName("button")[1].addEventListener("click", removeFirstBoxHandler);
+            document.getElementsByTagName("button")[2].addEventListener("click", removeLastBoxHandler);
+           });
+
+           function addBoxHandler(){
+                var element = document.createElement("div");
+                element.innerText=count;
+                document.getElementsByClassName("container")[0].appendChild(element);
+                count++;
+           };
+           function removeFirstBoxHandler(){
+                var element=document.getElementsByClassName("container")[0].firstChild;
+                if(element){
+                    document.getElementsByClassName("container")[0].removeChild(element);
+                    count--;
+           }
+           else{
+               alert("Nothing To Remove");
+           }
+        }
+        function removeLastBoxHandler(){
+            var element=document.getElementsByClassName("container")[0].lastChild;
+            if(element){
+                    document.getElementsByClassName("container")[0].removeChild(element);
+                    count--;
+           }
+           else{
+               alert("Nothing To Remove");
+           }
+
+        }*/
+        var count=1;
+        var buttons,container;
+        document.addEventListener("DOMContentLoaded",function(){
+            buttons=document.getElementsByTagName("button");
+            container=document.getElementsByClassName("container")[0];
+            buttons[0].addEventListener("click", addBoxHandler);
+            buttons[1].addEventListener("click", removeFirstBoxHandler);
+            buttons[2].addEventListener("click", removeLastBoxHandler);
+           });
+
+           function addBoxHandler(){
+                var element = document.createElement("div");
+                element.innerText=count;
+                container.appendChild(element);
+                count++;
+           };
+           function removeFirstBoxHandler(){
+                var element=container.firstChild;
+                if(element){
+                   container.removeChild(element);
+                    count--;
+           }
+           else{
+               alert("Nothing To Remove");
+           }
+        }
+        function removeLastBoxHandler(){
+            var element=container.lastChild;
+            if(element){
+                   container.removeChild(element);
+                    count--;
+           }
+           else{
+               alert("Nothing To Remove");
+           }
+
+        }
+           
+            
+                
+    </script>
+</head>
+<body >
+    <button>Add Box</button>
+    <button>Remove First Boxes</button>
+    <button>Remove Last Boxes</button>
+    <hr>
+    <div  class="container"></div>
+</body>

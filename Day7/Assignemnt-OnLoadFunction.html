@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<script>
+function fun1(){
+  alert('This is fun 1 from body onload');
+}
+function fun2(){
+  alert('This is fun 2 from window event listener');
+}
+function fun3(){
+  alert('This is fun 3 from document event listener');
+}
+window.addEventListener('load',fun2);
+document.addEventListener('DOMContentLoaded',fun3)
+
+//the document event listener executes first, then the window event listener 
+//and finally the body onload executes.
+
+</script>
+
+<style>
+  header{
+    text-align: center;
+    background-color: gray;
+    height: 200px;
+    line-height: 200px;
+  }
+</style>
+</head>
+<body onload="fun1()">
+  <header>
+    <h1>
+      onLoad Functions
+    </h1>
+  </header>
+</body>
+</html>

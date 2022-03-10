@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #log{
+            width:1000px;
+            height: 500px;
+            background-color: rgb(214, 65, 65);
+            color:slategrey;
+            overflow: auto;
+            margin: 50px auto;
+        }
+        button{
+            width: 300px;
+            display: block;
+            margin: 10px auto;
+
+        }
+        .box{
+            width:300px;
+            background-color: darkgrey;
+            float: left;
+            margin: 10px;
+
+        }
+        .box img{
+            width: 300px;
+            
+        }
+        .box h1{
+            margin:10px;
+            text-align: center;
+            font-family: 'Trebuchet MS';
+            background-color: rgb(59, 52, 52);
+            color:silver;
+
+        }
+        .box h2,h3{
+            margin: 0px;
+            padding:5px;
+            text-align: center;
+            font-family: 'Trebuchet MS';
+            font-size: 18px;
+            background-color: rgb(59, 52, 52);
+            color:silver;
+        
+
+        }
+    </style>
+    <script>
+        var xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=function(){
+            console.log("Ready State Value",xhr.readyState);
+            if(xhr.status == 200 && xhr.readyState==4){
+                var hero=xhr.responseXML.getElementsByTagName("hl");
+                for(var i=0 ;i<hero.length;i++){
+                   // document.getElementById("hl").innerHTML+="<li>"+hero[i].getElementsByTagName("title")[0].firstChild.nodeValue+"</li>"
+                   document.getElementById("log").innerHTML+="<div class='box'><h1>"+hero[i].querySelector("title").innerHTML+"</h1><h2>Full Name : "+hero[i].querySelector("firstname").innerHTML+" "+hero[i].querySelector("lastname").innerHTML+"</h2><img src='"+hero[i].querySelector('poster').innerHTML+"' alt='batman'><h3>City : "+hero[i].querySelector("city").innerHTML+"</h3><h3>Ticket Price : "+hero[i].querySelector("ticketprice").innerHTML+"</h3><h3>Release Date : "+hero[i].querySelector("releasedate").innerHTML+"</h3></div>"
+
+                }
+                
+                }
+               
+            else{
+                //alert.(xhr.readyState);
+                //console.log(xhr.readyState);
+                //document.getElementById("log").innerText+="XHR Status :"+xhr.readyState+" | XHR Status Text :"+xhr.statusText+"\n";
+            }
+        };
+        document.addEventListener("DOMContentLoaded",function(){
+               xhr.open("get","data.xml",true);
+            xhr.send();
+                
+           
+        })
+        </script>
+    
+</head>
+<body>
+    <div id="log"></div>
+   
+     
+</body>
+</html>

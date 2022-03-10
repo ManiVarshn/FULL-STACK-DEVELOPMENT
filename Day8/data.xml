@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <hl>
+    <sl>1</sl>
+    <title>Batman</title>
+    <gender>male</gender>
+    <firstname>Bruce</firstname>
+    <lastname>Wayne</lastname>
+    <city>Gotham</city>
+    <ticketprice>123.4567</ticketprice>
+    <releasedate>1/26/2018</releasedate>
+    <poster>images/batman.jpg</poster>
+  </hl>
+  <hl>
+    <sl>2</sl>
+    <title>Superman</title>
+    <gender>male</gender>
+    <firstname>Clark</firstname>
+    <lastname>Kent</lastname>
+    <city>Metropolis</city>
+    <ticketprice>178.6789</ticketprice>
+    <releasedate>1/27/2018</releasedate>
+    <poster>images/superman.jpg</poster>
+  </hl>
+  <hl>
+    <sl>3</sl>
+    <title>Ironman</title>
+    <gender>male</gender>
+    <firstname>Tony</firstname>
+    <lastname>Stark</lastname>
+    <city>New York</city>
+    <ticketprice>122</ticketprice>
+    <releasedate>1/27/2018</releasedate>
+    <poster>images/ironman.jpg</poster>
+  </hl>
+  <hl>
+    <sl>4</sl>
+    <title>Phantom</title>
+    <gender>male</gender>
+    <firstname>Kit</firstname>
+    <lastname>Walker</lastname>
+    <city>Bhangala</city>
+    <ticketprice>98.6456</ticketprice>
+    <releasedate>1/27/2018</releasedate>
+    <poster>images/phantom.jpg</poster>
+  </hl>
+  <hl>
+    <sl>5</sl>
+    <title>Spiderman</title>
+    <gender>male</gender>
+    <firstname>Peter</firstname>
+    <lastname>Parker</lastname>
+    <city>New York</city>
+    <ticketprice>1.3456</ticketprice>
+    <releasedate>9/26/2018</releasedate>
+    <poster>images/spiderman.jpg</poster>
+  </hl>
+  <hl>
+    <sl>6</sl>
+    <title>Wonder Women</title>
+    <gender>female</gender>
+    <firstname>Princess</firstname>
+    <lastname>Diana</lastname>
+    <city>Amazon</city>
+    <ticketprice>341.3456978978</ticketprice>
+    <releasedate>11/26/2018</releasedate>
+    <poster>images/wonderwoman.jpg</poster>
+  </hl>
+</root>

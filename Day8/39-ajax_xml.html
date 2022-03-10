@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:600px;
+            height: 200px;
+            background-color: silver;
+            color:slategrey;
+            padding: 5px;
+            overflow: auto;
+            margin: 50px auto;
+        }
+        button{
+            width: 300px;
+            display: block;
+            margin: 10px auto;
+
+        }
+    </style>
+    <script>
+        var xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=function(){
+            console.log("Ready State Value",xhr.readyState);
+            if(xhr.status == 200 && xhr.readyState==4){
+                var hero=xhr.responseXML.getElementsByTagName("hl");
+                for(var i=0 ;i<hero.length;i++){
+                   // document.getElementById("hl").innerHTML+="<li>"+hero[i].getElementsByTagName("title")[0].firstChild.nodeValue+"</li>"
+                   document.getElementById("hl").innerHTML+="<li>"+hero[i].querySelector("title").innerHTML+"</li>"
+
+                }
+                
+                }
+               
+            else{
+                //alert.(xhr.readyState);
+                //console.log(xhr.readyState);
+                //document.getElementById("log").innerText+="XHR Status :"+xhr.readyState+" | XHR Status Text :"+xhr.statusText+"\n";
+            }
+        };
+        document.addEventListener("DOMContentLoaded",function(){
+           document.getElementsByTagName("button")[0].onclick=function(){
+               xhr.open("get","data.xml",true);
+            xhr.send();
+           }
+                
+           
+        })
+        </script>
+    
+</head>
+<body>
+    <button>Fetch Data</button>
+    <!--<div id="log"></div>-->
+    <ol id="hl"></ol>
+     
+</body>
+</html>

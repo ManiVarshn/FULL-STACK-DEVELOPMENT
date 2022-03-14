@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         let asynCall1=function(){
+            return new Promise(function(resolve,reject){
+             setTimeout(function(){
+                 if(false){
+                     resolve("Response from AsyncCall 1");
+                 }
+                 else{
+                     reject("Reject from AsyncCall 1");
+                 }
+             },1000)
+         });
+        }
+        let asynCall2=function(){
+            return new Promise(function(resolve,reject){
+             setTimeout(function(){
+                 if(false){
+                     resolve("Response from AsyncCall 2");
+                 }
+                 else{
+                     reject("Reject from AsyncCall2");
+                 }
+             },2000)
+         })
+        };
+        let asynCall3=function(){
+            return new Promise(function(resolve,reject){
+             setTimeout(function(){
+                 if(true){
+                     resolve("Response from AsyncCall 3");
+                 }
+                 else{
+                     reject("Reject from AsyncCall3");
+                 }
+             },3000)
+         })
+        };
+    /*Promise.all([asynCall1(),asynCall2(),asynCall3()]).then((res)=>console.log(res)).catch((error)=>console.log(error)).finally(()=>console.log("All Promise has completed"));*/
+   /* Promise
+    .any([asynCall1(),asynCall2(),asynCall3()])
+    .then((res)=>console.log(res))
+    .catch((error)=>console.log(error))
+    .finally(()=>console.log("One Promise has completed"));*/
+
+    Promise
+    .race([asynCall1(),asynCall2(),asynCall3()])
+    .then((res)=>console.log(res))
+    .catch((error)=>console.log(error))
+    .finally(()=>console.log(" Promise Race has completed"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

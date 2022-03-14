@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var herodata=[{
+        "sl": 1,
+        "title": "Batman",
+        "gender": "male",
+        "firstname": "Bruce",
+        "lastname": "Wayne",
+        "city": "Gotham",
+        "ticketprice": 123.4567,
+        "releasedate": "1/26/2018",
+        "poster": "images/batman.jpg"
+    
+    },
+    {
+        "sl": 2,
+        "title": "Superman",
+        "gender": "male",
+        "firstname": "Clark",
+        "lastname": "Kent",
+        "city": "Metropolis",
+        "ticketprice": 178.6789,
+        "releasedate": "1/27/2018",
+        "poster": "images/superman.jpg"
+    
+    },
+    {
+        "sl": 3,
+        "title": "Ironman",
+        "gender": "male",
+        "firstname": "Tony",
+        "lastname": "Stark",
+        "city": "New York",
+        "ticketprice": 122,
+        "releasedate": "1/27/2018",
+        "poster": "images/ironman.jpg"
+    
+    }, {
+        "sl": 4,
+        "title": "Phantom",
+        "gender": "male",
+        "firstname": "Kit",
+        "lastname": "Walker",
+        "city": "Bhangala",
+        "ticketprice": 98.6456,
+        "releasedate": "1/27/2018",
+        "poster": "images/phantom.jpg"
+    
+    }, {
+        "sl": 5,
+        "title": "Spiderman",
+        "gender": "male",
+        "firstname": "Peter",
+        "lastname": "Parker",
+        "city": "New York",
+        "ticketprice": 1.3456,
+        "releasedate": "9/26/2018",
+        "poster": "images/spiderman.jpg"
+    },
+    {
+        "sl": 6,
+        "title": "Wonder Women",
+        "gender": "female",
+        "firstname": "Princess",
+        "lastname": "Diana",
+        "city": "Amazon",
+        "ticketprice": 341.3456978978,
+        "releasedate": "11/26/2018",
+        "poster": "images/wonderwoman.jpg"
+    }]
+       document.addEventListener("DOMContentLoaded",()=>{
+           herodata.forEach(function(val){
+            document.querySelector("#herolist").innerHTML+=`<h1>Title: ${val.title}</h1>
+                                                           <h2>Ticket Price:${val.ticketprice}</h2>
+                                                           <h3>City:${val.city}</h3>`;
+           })
+        })
+    </script>
+</head>
+<body>
+    <div id="herolist"></div>
+</body>
+</html>

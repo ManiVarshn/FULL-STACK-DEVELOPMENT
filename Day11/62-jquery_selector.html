@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.6.0.js"></script>
+    <script>
+        $(()=>{
+            //$("li")[0].innerHTML="Selected";
+           // $("h1,h2").css("border","2px solid red");
+            //$(".a.b").css("border","2px solid red");
+           // $("li:first-child:first").css("border","2px solid red");
+           //$("li:contains('Mani')").css("border","2px solid red");
+          // $("p:empty").css("border","2px solid red");
+          //$("ul:has('.m')").css("border","2px solid red");
+          $("li:first-child").css("border","2px solid red"); //indexing start with 0 in j query and in css from 1
+          
+          
+
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li class="m">List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+    <ul>
+        <li>List Item 1 Mani</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+    <h1>Mani Varshney</h1>
+    <h2>MCA Student</h2>
+    <p class="a">Ajay Kumar Garg Engineering College</p>
+    <p class="b">Ghaziabad</p>
+    <p class="a b">Current Location:Moradabad</p>
+    <p></p>
+    
+</body>
+</html>
